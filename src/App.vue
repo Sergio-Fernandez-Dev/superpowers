@@ -5,7 +5,7 @@ import NavBar from './components/NavBar.vue';
 
 <template>
   <header>
-    <div class="header">
+    <div class="wrapper">
       <img src="" alt="logo" />
       <NavBar />
     </div>
@@ -20,4 +20,19 @@ import NavBar from './components/NavBar.vue';
 
 <style>
 @import '@/assets/base.css';
+
+header {
+  background-color: var(--red);
+  width: 100vw;
+  min-height: 20px;
+  padding: 0 15vw;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper > img {
+  margin: 4px 0;
+}
 </style>

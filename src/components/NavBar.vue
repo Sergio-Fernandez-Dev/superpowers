@@ -33,8 +33,11 @@ nav {
 
 a {
   text-decoration: none;
-  color: black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  font-family: Badaboom BB;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--yellow);
 }
 </style>
