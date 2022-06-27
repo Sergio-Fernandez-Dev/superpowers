@@ -1,0 +1,40 @@
+<script>
+import router from '../router';
+export default {
+  data() {
+    return {
+      currentPath: '',
+      name: '',
+    };
+  },
+  methods: {
+    getPath() {
+      this.currentPath = router.currentRoute.value.path;
+      return this.currentPath;
+    },
+    setName(username) {
+      this.name = username;
+    },
+  },
+};
+</script>
+
+<template>
+  <nav>
+    <RouterLink v-if="getPath() == '/'" to="/favourites">FAVORITOS</RouterLink>
+    <RouterLink v-else to="/">HOME</RouterLink>
+  </nav>
+</template>
+
+<style>
+nav {
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
