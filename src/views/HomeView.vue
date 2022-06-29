@@ -7,6 +7,7 @@ export default {
 <template>
   <div>
     <h1>HOME</h1>
+    <main></main>
   </div>
 </template>
 
