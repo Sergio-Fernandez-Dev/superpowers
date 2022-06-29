@@ -14,9 +14,10 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
     <div class="right-box">
       <EditButton />
       <ul class="info-list">
-        <h2></h2>
-        <li>Nombre real: <span class="info"></span></li>
-        <p>Estadísticas:</p>
+        <h2>SUPERMAN</h2>
+        <li>Nombre real:</li>
+        <span class="info">Clark Ken</span>
+        <p class="separated">Estadísticas:</p>
         <li>Inteligencia: <span class="info"></span></li>
         <li>Fuerza: <span class="info"></span></li>
         <li>Velocidad: <span class="info"></span></li>
@@ -61,5 +62,26 @@ img {
   height: 250px;
   background-color: var(--white);
   border-radius: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: var(--text);
+  font-size: 16px;
+}
+
+p {
+  color: var(--text);
+}
+
+.separated {
+  margin-top: 8px;
+}
+
+.info {
+  color: var(--info);
 }
 </style>

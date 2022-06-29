@@ -24,7 +24,7 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: Kdam Thmor Pro, Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

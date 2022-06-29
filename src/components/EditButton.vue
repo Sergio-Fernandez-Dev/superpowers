@@ -1,14 +1,15 @@
-
 <script>
-export default {
-    
-}
+export default {};
 </script>
 <template>
-    <div>
-        <img src="./icons/EditButtonIcon.svg">
-    </div>
+  <div class="edit">
+    <img src="./icons/EditButtonIcon.svg" />
+  </div>
 </template>
 <style>
-    
+.edit {
+  display: flex;
+  justify-content: end;
+  margin: 7px;
+}
 </style>
