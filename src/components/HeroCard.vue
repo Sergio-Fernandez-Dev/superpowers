@@ -6,7 +6,7 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
 </script>
 
 <template>
-  <div>
+  <div class="card">
     <div class="left-box">
       <img src="" alt="" />
       <StarRanking />
@@ -30,4 +30,36 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+  width: 526px;
+  height: 341px;
+  background-color: var(--navy);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-box {
+  width: 168px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.right-box {
+  width: 168px;
+  height: 272px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+img {
+  width: 168px;
+  height: 250px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+</style>

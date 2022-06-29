@@ -21,9 +21,11 @@ export default {};
 
 <style>
 form {
-  width: 250px;
+  width: auto;
   margin: 0 auto;
   height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 form label {
