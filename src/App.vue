@@ -10,9 +10,7 @@ import NavBar from './components/NavBar.vue';
       <NavBar />
     </div>
   </header>
-  <main>
-    <RouterView />
-  </main>
+  <RouterView />
   <footer>
     <p>&copy; Crazy House Team</p>
   </footer>
