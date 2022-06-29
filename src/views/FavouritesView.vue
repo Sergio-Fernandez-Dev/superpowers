@@ -1,10 +1,9 @@
 <script>
-import DeleteButton from "../components/DeleteButton.vue";
-import EditButton from "../components/EditButton.vue";
-export default{
-  components:{DeleteButton, EditButton}
-  
-}
+import DeleteButton from '../components/DeleteButton.vue';
+import EditButton from '../components/EditButton.vue';
+export default {
+  components: { DeleteButton, EditButton },
+};
 </script>
 
 <template>
