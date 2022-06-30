@@ -3,25 +3,24 @@ import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
 export default {
-   data(){
+  data() {
     return {
-     id: Number,
-     name: String,
-     realName: String,
-     intelligence: Number,
-     strength: Number,
-     speed: Number,
-     durability: Number,
-     power: Number,
-     combat: Number,
-    }
-   },
+      id: Number,
+      name: String,
+      realName: String,
+      intelligence: Number,
+      strength: Number,
+      speed: Number,
+      durability: Number,
+      power: Number,
+      combat: Number,
+    };
+  },
 
-   components: { StarRanking, EditButton, DeleteButton },
-   props: { 
-    id: this.id
-   }
-   
+  components: { StarRanking, EditButton, DeleteButton },
+  props: {
+    cardId: this.id,
+  },
 };
 </script>
 
@@ -34,19 +33,27 @@ export default {
     <div class="right-box">
       <EditButton />
       <ul class="info-list">
-        <h2>{{name}}</h2>
+        <h2>{{ name }}</h2>
         <li>Nombre real:</li>
-        <span class="info">{{realName}}</span>
+        <span class="info">{{ realName }}</span>
         <p class="separated">Estadísticas:</p>
-        <li>Inteligencia: <span class="info">{{intelligence}}</span></li>
-        <li>Fuerza: <span class="info">{{strength}}</span></li>
-        <li>Velocidad: <span class="info">{{speed}}</span></li>
-        <li>Durabilidad: <span class="info">{{durability}}</span></li>
-        <li>Poder: <span class="info"></span>{{power}}</li>
-        <li>Combate: <span class="info"></span>{{combat}}</li>
+        <li>
+          Inteligencia: <span class="info">{{ intelligence }}</span>
+        </li>
+        <li>
+          Fuerza: <span class="info">{{ strength }}</span>
+        </li>
+        <li>
+          Velocidad: <span class="info">{{ speed }}</span>
+        </li>
+        <li>
+          Durabilidad: <span class="info">{{ durability }}</span>
+        </li>
+        <li>Poder: <span class="info"></span>{{ power }}</li>
+        <li>Combate: <span class="info"></span>{{ combat }}</li>
       </ul>
-      <DeleteButton :id="id" />
-      <FavButton :id="id" />
+      <DeleteButton :id="cardId" />
+      <FavButton :id="cardId" />
     </div>
   </div>
 </template>
