@@ -1,6 +1,6 @@
-import {defineStorage} from 'pinia';
+import {defineStore} from 'pinia';
 //Uso de Contador de Storage Local de nuestro favoritos
-export const useCounterStorage = defineStorage({
+export const useCounterStorage = defineStore({
     //Section de nuestro propiedades
     id: 'counter',
     state:()=>({
