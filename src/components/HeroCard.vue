@@ -2,6 +2,7 @@
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
+<<<<<<< HEAD
 export default {
   data() {
     return {
@@ -20,6 +21,11 @@ export default {
   components: { StarRanking, EditButton, DeleteButton },
  
 };
+=======
+export default { components: { StarRanking, EditButton, DeleteButton } };
+
+
+>>>>>>> c882ff79a11e2925040a6bf9ba5774301a1abdc5
 </script>
 
 <template>
