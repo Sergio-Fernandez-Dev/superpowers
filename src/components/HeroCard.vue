@@ -3,6 +3,7 @@ import { getCurrentPath } from '../services/getCurrentPath';
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
+<<<<<<< HEAD
 export default {
   data() {
     return {
@@ -21,6 +22,11 @@ export default {
     id: this.hero.id,
   },
 };
+=======
+export default { components: { StarRanking, EditButton, DeleteButton } };
+
+
+>>>>>>> 2f489d84b74dd6a347fdf20e4be0579e0ef6a70a
 </script>
 
 <template>
