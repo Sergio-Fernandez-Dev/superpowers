@@ -17,7 +17,9 @@ export default {
   methods: {
     getCurrentPath,
   },
-  props: {},
+  props: {
+    id: this.hero.id,
+  },
 };
 </script>
 
