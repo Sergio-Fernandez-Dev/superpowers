@@ -3,13 +3,13 @@ export default {};
 </script>
 
 <template>
-  <div class="add favourite">
-    <img src="./icons/FavouriteButton.svg" />
+  <div class="addfavourite">
+    <img src="./icons/FavouriteButtonIcon.svg" />
   </div>
 </template>
 
 <style>
-.addfavorite {
+.addfavourite{
   display: flex;
   justify-content: end;
   margin: 0 7px 7px 0;

@@ -6,14 +6,20 @@ import { useCounterStorage } from '../store/counter';
     export default {
         //Nos permite monitorear la Cache de Navegador
         computed: {
-            ...mapState(useCounterStorage, ['counter', 'msg'])
+            ...mapState(useCounterStorage,{
+              count: 'counter',
+              message: 'msg',
+              double: 'doubleCount'
+
+            })
         }
     };
 </script>
 <template>
     <div>
       <h2>Icono para anadir Superheroe a FAVORITOS</h2>
-      <span>{{counter}}/{{msg}}</span>
+      <input type="text" name="test" id="test" v-model="message">
+      <span>{{ counter }}/{{ message }}/{{ double }}</span>
       <main></main>
     </div>
 </template>
