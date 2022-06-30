@@ -17,6 +17,7 @@ export default {
   methods: {
     getCurrentPath,
   },
+  props: {},
 };
 </script>
 
@@ -35,7 +36,7 @@ export default {
         <p class="separated">Estadísticas:</p>
         <li>
           Inteligencia:
-          <span class="info">{{ intelligence }}</span>
+          <span class="info">{{ hero.powerstats.intelligence }}</span>
         </li>
         <li>
           Fuerza:
@@ -47,7 +48,7 @@ export default {
         </li>
         <li>
           Durabilidad:
-          <span class="info">{{ hero.powerstats.durability }}</span>
+          <span class="info">{{ hero.powestats.durability }}</span>
         </li>
         <li>
           Poder:
@@ -81,6 +82,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: baseline;
+  background-color: var(--white);
+  border-radius: 20px;
 }
 
 .right-box {
@@ -88,11 +91,12 @@ export default {
   height: 272px;
   background-color: var(--white);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 img {
-  width: 168px;
-  height: 250px;
   background-color: var(--white);
   border-radius: 20px;
 }
