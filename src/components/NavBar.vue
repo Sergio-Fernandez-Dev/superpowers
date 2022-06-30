@@ -1,16 +1,14 @@
 <script>
-import router from '../router';
+import { getCurrentPath } from '../services/getCurrentPath';
 export default {
   data() {
     return {
-      currentPath: '',
       name: '',
     };
   },
   methods: {
     getPath() {
-      this.currentPath = router.currentRoute.value.path;
-      return this.currentPath;
+      return getCurrentPath();
     },
     setName(username) {
       this.name = username;
