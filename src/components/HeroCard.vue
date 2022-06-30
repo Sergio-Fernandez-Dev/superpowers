@@ -5,20 +5,14 @@ import DeleteButton from './DeleteButton.vue';
 export default {
   data() {
     return {
-      id: Number,
-      name: String,
-      realName: String,
-      intelligence: Number,
-      strength: Number,
-      speed: Number,
-      durability: Number,
-      power: Number,
-      combat: Number,
+      hero: Object,
     };
   },
-
-  components: { StarRanking, EditButton, DeleteButton },
- 
+  components: {
+    StarRanking,
+    EditButton,
+    DeleteButton,
+  },
 };
 </script>
 
@@ -31,24 +25,34 @@ export default {
     <div class="right-box">
       <EditButton />
       <ul class="info-list">
-        <h2>{{ name }}</h2>
+        <h2>{{ hero.name }}</h2>
         <li>Nombre real:</li>
-        <span class="info">{{ realName }}</span>
+        <span class="info">{{ hero.biography.fullName }}</span>
         <p class="separated">Estadísticas:</p>
         <li>
-          Inteligencia: <span class="info">{{ intelligence }}</span>
+          Inteligencia:
+          <span class="info">{{ intelligence }}</span>
         </li>
         <li>
-          Fuerza: <span class="info">{{ strength }}</span>
+          Fuerza:
+          <span class="info">{{ hero.powerstats.strength }}</span>
         </li>
         <li>
-          Velocidad: <span class="info">{{ speed }}</span>
+          Velocidad:
+          <span class="info">{{ hero.powerstats.speed }}</span>
         </li>
         <li>
-          Durabilidad: <span class="info">{{ durability }}</span>
+          Durabilidad:
+          <span class="info">{{ hero.powerstats.durability }}</span>
         </li>
-        <li>Poder: <span class="info"></span>{{ power }}</li>
-        <li>Combate: <span class="info"></span>{{ combat }}</li>
+        <li>
+          Poder:
+          <span class="info"></span>{{ hero.powerstats.power }}
+        </li>
+        <li>
+          Combate:
+          <span class="info"></span>{{ hero.powerstats.combat }}
+        </li>
       </ul>
       <DeleteButton :id="id" />
       <FavButton :id="id" />
