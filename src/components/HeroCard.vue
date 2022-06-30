@@ -18,9 +18,7 @@ export default {
   },
 
   components: { StarRanking, EditButton, DeleteButton },
-  props: {
-    cardId: this.id,
-  },
+ 
 };
 </script>
 
@@ -52,8 +50,8 @@ export default {
         <li>Poder: <span class="info"></span>{{ power }}</li>
         <li>Combate: <span class="info"></span>{{ combat }}</li>
       </ul>
-      <DeleteButton :id="cardId" />
-      <FavButton :id="cardId" />
+      <DeleteButton :id="id" />
+      <FavButton :id="id" />
     </div>
   </div>
 </template>
