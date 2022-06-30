@@ -3,6 +3,8 @@ import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
 export default { components: { StarRanking, EditButton, DeleteButton } };
+
+
 </script>
 
 <template>
