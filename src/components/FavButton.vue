@@ -4,7 +4,7 @@ export default {};
 
 <template>
   <div class="addfavourite">
-    <img src="./icons/FavouriteButtonIcon.svg" />
+    <img src="C:\Superpowers\superpowers\src\components\icons\FavouriteButtonIcon.svg" />
   </div>
 </template>
 

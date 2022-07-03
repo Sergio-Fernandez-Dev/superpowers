@@ -17,7 +17,7 @@ import { useCounterStorage } from '../store/counter';
 </script>
 <template>
     <div>
-      <img src="../icons/FavouriteButtonIcon.svg" />
+      <img src="./icons/FavouriteButtonIcon.svg" />
       <h2>Icono de anadir Superheroe a FAVORITOS</h2>
       <input type="text" name="test" id="test" v-model="count">
       <span>{{ count }}/{{ message }}/{{ double }}</span>
