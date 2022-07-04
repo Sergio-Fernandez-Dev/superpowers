@@ -10,7 +10,8 @@ import NavBar from './components/NavBar.vue';
       <NavBar />
     </div>
   </header>
-  <RouterView />
+  <RouterLink to="/favouriteload">Add Favourite Icon</RouterLink>
+  <RouterView/>
   <footer>
     <p>&copy; Crazy House Team</p>
   </footer>
