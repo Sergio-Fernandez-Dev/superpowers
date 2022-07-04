@@ -3,12 +3,9 @@ import { getCurrentPath } from '../services/getCurrentPath';
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
-<<<<<<< HEAD
 export default {
-  data() {
-    return {
-      hero: Object,
-    };
+  props: {
+    hero: Object,
   },
   components: {
     StarRanking,
@@ -18,25 +15,13 @@ export default {
   methods: {
     getCurrentPath,
   },
-  props: {
-    id: this.hero.id,
-  },
 };
-=======
-export default { components: { StarRanking, EditButton, DeleteButton } };
-
-
-<<<<<<< HEAD
->>>>>>> c882ff79a11e2925040a6bf9ba5774301a1abdc5
-=======
->>>>>>> 2f489d84b74dd6a347fdf20e4be0579e0ef6a70a
->>>>>>> 0e0f38b5e680b83eb9acb8d429fd9dedb1aa7cbf
 </script>
 
 <template>
   <div class="card">
     <div class="left-box">
-      <img src="" alt="" />
+      <img :src="hero.images.lg" :alt="hero.name" />
       <StarRanking v-if="getCurrentPath() == '/favourites'" />
     </div>
     <div class="right-box">
@@ -60,7 +45,7 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
         </li>
         <li>
           Durabilidad:
-          <span class="info">{{ hero.powestats.durability }}</span>
+          <span class="info">{{ hero.powerstats.durability }}</span>
         </li>
         <li>
           Poder:

@@ -1,20 +1,24 @@
 <script>
 import { apiCall } from '../services/apiCall';
 import HeroCard from '../components/HeroCard.vue';
-let superheroes = apiCall();
+
 export default {
   data() {
     return {
-      superheroeList: superheroes,
+      superheroeList: null,
     };
   },
   components: { HeroCard },
+  async created() {
+    this.superheroeList = await apiCall();
+  },
 };
 </script>
 
 <template>
   <h1>Home</h1>
-  <div :v-for="superheroe in superheroeList">
+  <div v-for="superheroe in superheroeList" :key="superheroe.id">
+    <p>{{ superheroe.name }}</p>
     <HeroCard :hero="superheroe" />
   </div>
 </template>
