@@ -5,7 +5,7 @@ export const useCounterStorage = defineStore({
     id: 'counter',
     state:()=>({
         counter:0,
-        msg: "Este es nuestro Boton de Add To Favourites"
+        msg: "prueba con exito"
 
     }),
     //Section de Getters que nos devuelve la informacion x2
