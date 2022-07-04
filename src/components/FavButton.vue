@@ -1,11 +1,19 @@
 <script>
-export default {};
-</script>
+import { favList } from '../store/favList';
+export default { 
+      props: {
+        favHero: Object
 
+      },
+      methods:{
+        ...mapActions(favList,[addHeroToFavs])
+      }
+        
+  };
+</script>
+  <!--<img src="C:\Superpowers\superpowers\src\components\icons\FavouriteButtonIcon.svg" /> -->
 <template>
-  <div class="addfavourite">
-    <img src="C:\Superpowers\superpowers\src\components\icons\FavouriteButtonIcon.svg" />
-  </div>
+  <button @click="addHeroToFavs(favHero)">ADD FAV</button>
 </template>
 
 <style>
