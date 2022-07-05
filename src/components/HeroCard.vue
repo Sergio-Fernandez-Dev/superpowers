@@ -59,7 +59,7 @@ export default {
         </li>
       </ul>
       <DeleteButton :id="id" v-if="getCurrentPath() == '/favourites'" />
-      <FavButton v-else :favHero="hero" />
+      <FavButton  :key="hero.id" :favHero="hero" />
     </div>
   </div>
 </template>

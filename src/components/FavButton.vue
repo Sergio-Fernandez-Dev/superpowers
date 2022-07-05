@@ -11,7 +11,7 @@ export default {
 };
 </script>
 <template>
-  <button @click="$addHeroToFavs(favHero)">ADD FAV</button>
+  <button @click="addHeroToFavs(favHero)">ADD FAV</button>
 </template>
 
 <style>
