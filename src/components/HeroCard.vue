@@ -64,18 +64,19 @@ export default {
 
 <style scoped>
 .card {
-  width: 526px;
-  height: 341px;
+  width: 406px;
+  height: 281px;
   background-color: var(--navy);
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: auto;
 }
 
 .left-box {
   width: 168px;
-  height: 272px;
+  height: 222px;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -85,7 +86,7 @@ export default {
 
 .right-box {
   width: 168px;
-  height: 272px;
+  height: 222px;
   background-color: var(--white);
   border-radius: 20px;
   display: flex;
