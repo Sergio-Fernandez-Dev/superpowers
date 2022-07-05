@@ -3,6 +3,7 @@ import { getCurrentPath } from '../services/getCurrentPath';
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
+import FavButton from './FavButton.vue';
 export default {
   props: {
     hero: Object,
@@ -11,6 +12,7 @@ export default {
     StarRanking,
     EditButton,
     DeleteButton,
+    FavButton,
   },
   methods: {
     getCurrentPath,
@@ -20,7 +22,7 @@ export default {
 
 <template>
   <div class="card">
-    <div class="left-box">
+    <div class="left-box left-box-fav">
       <img :src="hero.images.lg" :alt="hero.name" />
       <StarRanking v-if="getCurrentPath() == '/favourites'" />
     </div>
@@ -57,7 +59,7 @@ export default {
         </li>
       </ul>
       <DeleteButton :id="id" v-if="getCurrentPath() == '/favourites'" />
-      <FavButton v-else :id="id" />
+      <FavButton v-else :favHero="hero" />
     </div>
   </div>
 </template>

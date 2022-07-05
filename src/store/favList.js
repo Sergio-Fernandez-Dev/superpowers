@@ -5,11 +5,10 @@ export const favList = defineStore({
   state: () => {
     return { list: [] };
   },
-  //Section de Getters que nos devuelve la informacion x2
-  getters: {},
   actions: {
     addHeroToFavs(hero) {
       this.list.push(hero);
+      console.log(hero);
     },
   },
 });
