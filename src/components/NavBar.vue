@@ -1,17 +1,13 @@
 <script>
-import router from '../router';
+import { getCurrentPath } from '../services/getCurrentPath';
 export default {
   data() {
     return {
-      currentPath: '',
       name: '',
     };
   },
   methods: {
-    getPath() {
-      this.currentPath = router.currentRoute.value.path;
-      return this.currentPath;
-    },
+    getCurrentPath,
     setName(username) {
       this.name = username;
     },
@@ -21,7 +17,9 @@ export default {
 
 <template>
   <nav>
-    <RouterLink v-if="getPath() == '/'" to="/favourites">FAVORITOS</RouterLink>
+    <RouterLink v-if="getCurrentPath() == '/'" to="/favourites"
+      >FAVORITOS</RouterLink
+    >
     <RouterLink v-else to="/">HOME</RouterLink>
   </nav>
 </template>

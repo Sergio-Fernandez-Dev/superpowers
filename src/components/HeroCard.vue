@@ -1,32 +1,63 @@
 <script>
+import { getCurrentPath } from '../services/getCurrentPath';
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
-export default { components: { StarRanking, EditButton, DeleteButton } };
+export default {
+  props: {
+    hero: Object,
+  },
+  components: {
+    StarRanking,
+    EditButton,
+    DeleteButton,
+  },
+  methods: {
+    getCurrentPath,
+  },
+};
 </script>
 
 <template>
   <div class="card">
     <div class="left-box">
-      <img src="" alt="" />
-      <StarRanking />
+      <img :src="hero.images.lg" :alt="hero.name" />
+      <StarRanking v-if="getCurrentPath() == '/favourites'" />
     </div>
     <div class="right-box">
-      <EditButton />
+      <EditButton v-if="getCurrentPath() == '/favourites'" />
       <ul class="info-list">
-        <h2>SUPERMAN</h2>
+        <h2>{{ hero.name }}</h2>
         <li>Nombre real:</li>
-        <span class="info">Clark Ken</span>
+        <span class="info">{{ hero.biography.fullName }}</span>
         <p class="separated">Estadísticas:</p>
-        <li>Inteligencia: <span class="info"></span></li>
-        <li>Fuerza: <span class="info"></span></li>
-        <li>Velocidad: <span class="info"></span></li>
-        <li>Durabilidad: <span class="info"></span></li>
-        <li>Poder: <span class="info"></span></li>
-        <li>Combate: <span class="info"></span></li>
+        <li>
+          Inteligencia:
+          <span class="info">{{ hero.powerstats.intelligence }}</span>
+        </li>
+        <li>
+          Fuerza:
+          <span class="info">{{ hero.powerstats.strength }}</span>
+        </li>
+        <li>
+          Velocidad:
+          <span class="info">{{ hero.powerstats.speed }}</span>
+        </li>
+        <li>
+          Durabilidad:
+          <span class="info">{{ hero.powerstats.durability }}</span>
+        </li>
+        <li>
+          Poder:
+          <span class="info">{{ hero.powerstats.power }}</span>
+        </li>
+        <li>
+          Combate:
+          <span class="info">{{ hero.powerstats.combat }}</span>
+        </li>
       </ul>
-      <DeleteButton />
-      <FavButton />
+      <DeleteButton :id="id" v-if="getCurrentPath() == '/favourites'" />
+      <FavButton v-else :id="id" />
     </div>
   </div>
 </template>
@@ -48,6 +79,8 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
   display: flex;
   flex-direction: column;
   justify-content: baseline;
+  background-color: var(--white);
+  border-radius: 20px;
 }
 
 .right-box {
@@ -55,11 +88,12 @@ export default { components: { StarRanking, EditButton, DeleteButton } };
   height: 272px;
   background-color: var(--white);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 img {
-  width: 168px;
-  height: 250px;
   background-color: var(--white);
   border-radius: 20px;
 }
