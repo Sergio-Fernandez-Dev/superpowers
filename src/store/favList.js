@@ -6,10 +6,8 @@ export const favList = defineStore({
     return { list: [] };
   },
   actions: {
-    addHeroToFavs(hero) {
-      this.list.push(hero);
-      
-      console.log("Desde Store" + hero);
+    addHeroToFavs() {
+      console.log(this.list);
     },
   },
 });

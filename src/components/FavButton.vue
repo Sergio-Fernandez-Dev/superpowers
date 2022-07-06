@@ -1,6 +1,7 @@
 <script>
 import { mapActions } from 'pinia';
 import { favList } from '../store/favList';
+
 export default {
   props: {
     favHero: Object,

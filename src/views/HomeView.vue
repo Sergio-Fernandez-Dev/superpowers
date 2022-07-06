@@ -17,10 +17,11 @@ export default {
 
 <template>
   <h1>Home</h1>
-  <div v-for="superheroe in superheroeList" :key="superheroe.id">
-    <p>{{ superheroe.name }}</p>
-    <HeroCard :hero="superheroe" />
-  </div>
+  <HeroCard
+    v-for="superheroe in superheroeList"
+    :key="superheroe.id"
+    :hero="superheroe"
+  />
 </template>
 
 <style></style>
