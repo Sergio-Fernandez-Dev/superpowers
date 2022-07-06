@@ -58,7 +58,11 @@ export default {
           <span class="info">{{ hero.powerstats.combat }}</span>
         </li>
       </ul>
-      <DeleteButton :id="id" v-if="getCurrentPath() == '/favourites'" />
+      <DeleteButton
+        :key="hero.id"
+        :favHero="hero"
+        v-if="getCurrentPath() == '/favourites'"
+      />
       <FavButton :key="hero.id" :favHero="hero" />
     </div>
   </div>
