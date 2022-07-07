@@ -64,7 +64,7 @@ export default {
         v-if="getCurrentPath() == '/favourites'"
       />
       <FavButton
-        v-if="getCurrentPath() == '/'"
+        v-if="getCurrentPath() == '/' && hero"
         :key="hero.id"
         :favHero="hero"
       />

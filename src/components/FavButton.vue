@@ -12,7 +12,9 @@ export default {
 };
 </script>
 <template>
-  <button type="submit" @click.prevent="addHeroToFavs(favHero)">ADD FAV</button>
+  <div @click.prevent="addHeroToFavs(favHero)">
+    <img src="" />
+  </div>
 </template>
 
 <style>

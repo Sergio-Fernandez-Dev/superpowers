@@ -10,7 +10,6 @@ import NavBar from './components/NavBar.vue';
       <NavBar />
     </div>
   </header>
-  <RouterLink to="/favouriteload">Add Favourite Icon</RouterLink>
   <RouterView />
   <footer>
     <p class="footer">&copy; Crazy House Team 2022</p>
@@ -34,7 +33,7 @@ header {
 .wrapper > img {
   margin: 4px 0;
 }
-.footer{
+.footer {
   background-color: var(--red);
   height: 71px;
   font-family: Kdam Thmor Pro, Arial, Helvetica, sans-serif;
@@ -45,6 +44,4 @@ header {
   align-items: center;
   margin-top: 31px;
 }
-
-
 </style>
