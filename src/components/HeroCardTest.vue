@@ -21,40 +21,40 @@ export default {
 <template>
   <div class="card">
     <div class="left-box left-box-fav">
-        <img class="img-fav" :src="hero.images.lg" :alt="hero.name" />
-        <StarRanking />
+      <img class="img-fav" :src="hero.images.lg" :alt="hero.name" />
+      <StarRanking />
     </div>
     <div class="right-box right-box-fav">
-        <EditButton />
-        <ul class="info-list">
-            <h2>{{ hero.name }}</h2>
-            <li>Nombre real:</li>
-            <span class="info">{{ hero.biography.fullName }}</span>
-            <p class="separated">Estadísticas:</p>
-            <li>
-            Inteligencia:
-            <span class="info">{{ hero.powerstats.intelligence }}</span>
-            </li>
-            <li>
-            Fuerza:
-            <span class="info">{{ hero.powerstats.strength }}</span>
-            </li>
-            <li>
-            Velocidad:
-            <span class="info">{{ hero.powerstats.speed }}</span>
-            </li>
-            <li>
-            Durabilidad:
-            <span class="info">{{ hero.powerstats.durability }}</span>
-            </li>
-            <li>
-            Poder:
-            <span class="info">{{ hero.powerstats.power }}</span>
-            </li>
-            <li>
-            Combate:
-            <span class="info">{{ hero.powerstats.combat }}</span>
-            </li>
+      <EditButton />
+      <ul class="info-list">
+        <h2>{{ hero.name }}</h2>
+        <li>Nombre real:</li>
+        <span class="info">{{ hero.biography.fullName }}</span>
+        <p class="separated">Estadísticas:</p>
+        <li>
+          Inteligencia:
+          <span class="info">{{ hero.powerstats.intelligence }}</span>
+        </li>
+        <li>
+          Fuerza:
+          <span class="info">{{ hero.powerstats.strength }}</span>
+        </li>
+        <li>
+          Velocidad:
+          <span class="info">{{ hero.powerstats.speed }}</span>
+        </li>
+        <li>
+          Durabilidad:
+          <span class="info">{{ hero.powerstats.durability }}</span>
+        </li>
+        <li>
+          Poder:
+          <span class="info">{{ hero.powerstats.power }}</span>
+        </li>
+        <li>
+          Combate:
+          <span class="info">{{ hero.powerstats.combat }}</span>
+        </li>
       </ul>
       <DeleteButton :id="id" />
     </div>
@@ -120,19 +120,12 @@ p {
 }
 
 .left-box-fav {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 70px;
-   
+  width: 150px;
+  height: 150px;
+  margin-bottom: 70px;
 }
 
-.right-box-fav{
-    height: auto;
-
-
-
-
-
+.right-box-fav {
+  height: auto;
 }
-
 </style>
