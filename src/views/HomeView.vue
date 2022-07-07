@@ -17,11 +17,20 @@ export default {
 
 <template>
   <h1>Home</h1>
-  <HeroCard
-    v-for="superheroe in superheroeList"
-    :key="superheroe.id"
-    :hero="superheroe"
-  />
+  <main class="home">
+    <HeroCard
+      v-for="superheroe in superheroeList"
+      :key="superheroe.id"
+      :hero="superheroe"
+    />
+  </main>
 </template>
 
-<style></style>
+<style>
+.home {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+</style>

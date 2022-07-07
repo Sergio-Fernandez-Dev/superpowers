@@ -34,8 +34,9 @@ a {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-family: Badaboom BB;
-  font-size: 28px;
+  font-size: 48px;
   letter-spacing: 2px;
   color: var(--yellow);
+  -webkit-text-stroke: 1px black;
 }
 </style>

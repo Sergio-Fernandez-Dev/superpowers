@@ -3,7 +3,6 @@ import { getCurrentPath } from '../services/getCurrentPath';
 import StarRanking from './StarRanking.vue';
 import EditButton from './EditButton.vue';
 import DeleteButton from './DeleteButton.vue';
-import FavButton from './FavButton.vue';
 export default {
   props: {
     hero: Object,
@@ -12,7 +11,6 @@ export default {
     StarRanking,
     EditButton,
     DeleteButton,
-    FavButton,
   },
   methods: {
     getCurrentPath,
@@ -23,11 +21,11 @@ export default {
 <template>
   <div class="card">
     <div class="left-box left-box-fav">
-      <img :src="hero.images.lg" :alt="hero.name" />
-      <StarRanking v-if="getCurrentPath() == '/favourites'" />
+      <img class="img-fav" :src="hero.images.lg" :alt="hero.name" />
+      <StarRanking />
     </div>
-    <div class="right-box">
-      <EditButton v-if="getCurrentPath() == '/favourites'" />
+    <div class="right-box right-box-fav">
+      <EditButton />
       <ul class="info-list">
         <h2>{{ hero.name }}</h2>
         <li>Nombre real:</li>
@@ -58,16 +56,7 @@ export default {
           <span class="info">{{ hero.powerstats.combat }}</span>
         </li>
       </ul>
-      <DeleteButton
-        :key="hero.id"
-        :favHero="hero"
-        v-if="getCurrentPath() == '/favourites'"
-      />
-      <FavButton
-        v-if="getCurrentPath() == '/'"
-        :key="hero.id"
-        :favHero="hero"
-      />
+      <DeleteButton :id="id" />
     </div>
   </div>
 </template>
@@ -128,5 +117,15 @@ p {
 
 .info {
   color: var(--info);
+}
+
+.left-box-fav {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 70px;
+}
+
+.right-box-fav {
+  height: auto;
 }
 </style>
