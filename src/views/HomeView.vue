@@ -32,5 +32,15 @@ export default {
   grid-gap: 2em;
   grid-template-columns: repeat(3, 1fr);
 }
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: Badaboom BB; 
+  color: var(--navy);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 42px;
+  background-color: rgba(0, 204, 255, 0.274);
+  
+}
 
 </style>
