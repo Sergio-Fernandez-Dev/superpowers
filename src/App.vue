@@ -23,7 +23,7 @@ header {
   background-color: var(--red);
   width: 100vw;
   min-height: 20px;
-  padding: 0 15vw;
+  padding: 0 35px;
 }
 .wrapper {
   display: flex;
