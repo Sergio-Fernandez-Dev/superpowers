@@ -1,12 +1,23 @@
 <script>
-export default {};
+import { favList } from '../store/favList';
+import HeroCard from '../components/HeroCard.vue';
+import { mapState } from 'pinia';
+
+export default {
+  computed: {
+    ...mapState(favList, ['list']),
+  },
+  components: { HeroCard },
+};
 </script>
 
 <template>
-  <div>
-    <h1>FAVOURITES</h1>
-    <main></main>
-  </div>
+  <h1>Home</h1>
+  <HeroCard
+    v-for="superheroe in this.list"
+    :key="superheroe.id"
+    :hero="superheroe"
+  />
 </template>
 
 <style></style>
