@@ -17,7 +17,7 @@ export const favList = defineStore({
       console.log(this.list);
     },
     removeHeroFromFavs(hero) {
-      this.list = this.list.filter((currentHero) => currentHero != hero);
+      this.list = this.list.filter((currentHero) => currentHero.id != hero.id);
       console.log(this.list);
     },
   },

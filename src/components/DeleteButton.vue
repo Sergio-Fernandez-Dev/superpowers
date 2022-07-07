@@ -13,10 +13,8 @@ export default {
 </script>
 
 <template>
-  <div class="delete">
-    <button type="button" @click="removeHeroFromFavs(favHero)">
-      <img src="./icons/DeleteButtonIcon.svg" />
-    </button>
+  <div @click="removeHeroFromFavs(favHero)" class="delete">
+    <img src="./icons/DeleteButtonIcon.svg" />
   </div>
 </template>
 
