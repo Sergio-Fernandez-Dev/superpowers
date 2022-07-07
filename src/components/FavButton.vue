@@ -12,8 +12,8 @@ export default {
 };
 </script>
 <template>
-  <div @click.prevent="addHeroToFavs(favHero)">
-    <img src="" />
+  <div @click.prevent="addHeroToFavs(favHero)" class="addfavourite">
+    <img src="./icons/FavButtonIcon.svg" />
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
 .addfavourite {
   display: flex;
   justify-content: end;
-  margin: 0 7px 7px 0;
+  margin: 7px;
 }
+
 </style>
