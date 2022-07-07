@@ -6,7 +6,7 @@ import NavBar from './components/NavBar.vue';
 <template>
   <header>
     <div class="wrapper">
-      <img src="" alt="logo" />
+      <img src="./assets/img/logo-superpowers.png" alt="logo" />
       <NavBar />
     </div>
   </header>
@@ -28,10 +28,11 @@ header {
 .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .wrapper > img {
-  margin: 4px 0;
+  height: 55px;
 }
 .footer {
   background-color: var(--red);
