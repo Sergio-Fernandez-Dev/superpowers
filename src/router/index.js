@@ -1,9 +1,7 @@
-import path from 'path';
 import { createRouter, createWebHistory } from 'vue-router';
 import FavouritesView from '../views/FavouritesView.vue';
 import HomeView from '../views/HomeView.vue';
 import TestView from '../views/TestView.vue';
-import FavouriteLoadView from '../views/FavouriteLoadView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,11 +20,6 @@ const router = createRouter({
       path: '/test',
       name: 'test',
       component: TestView,
-    },
-    {
-      path: '/favouriteload',
-      name: 'favouriteload',
-      component: FavouriteLoadView,
     },
   ],
 });

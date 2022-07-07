@@ -13,7 +13,9 @@ export const favList = defineStore({
       return this.addHeroToFavs(hero);
     },
     addHeroToFavs(hero) {
-      this.list.push(hero);
+      if (!this.list.includes(hero)) {
+        this.list.push(hero);
+      }
       console.log(this.list);
     },
     removeHeroFromFavs(hero) {
