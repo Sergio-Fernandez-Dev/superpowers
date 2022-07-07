@@ -129,4 +129,14 @@ p {
 .info {
   color: var(--info);
 }
+
+.left-box-fav {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 70px;
+}
+
+.right-box-fav {
+  height: auto;
+}
 </style>
