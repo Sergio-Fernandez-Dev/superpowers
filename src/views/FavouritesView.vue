@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <h1>Home</h1>
+  <h1>Superfavoritos</h1>
   <main class="fav">
     <HeroCard
       v-for="superheroe in this.list"

@@ -20,8 +20,14 @@ export default {
 
 <style>
 .delete {
+  position: absolute;
   display: flex;
   justify-content: end;
-  margin: 0 7px 7px 0;
+  margin: 7px;
+  align-items: flex-end;
+  margin-top: 185px;
+  left: 130px;
+ 
 }
+ 
 </style>
