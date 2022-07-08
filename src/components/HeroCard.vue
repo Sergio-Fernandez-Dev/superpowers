@@ -24,7 +24,7 @@ export default {
   <div class="card">
     <div class="left-box left-box-fav">
       <img :src="hero.images.lg" :alt="hero.name" />
-      <StarRanking v-if="getCurrentPath() == '/favourites'" />
+      <StarRanking v-if="getCurrentPath() == '/favourites'" :id="hero.id" />
     </div>
     <div class="right-box">
       <EditButton v-if="getCurrentPath() == '/favourites'" />
