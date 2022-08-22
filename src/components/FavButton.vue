@@ -23,5 +23,4 @@ export default {
   justify-content: end;
   margin: 7px;
 }
-
 </style>
