@@ -1,41 +1,72 @@
-# superpowers
+# SUPERPOWERS
 
-This template should help get you started developing with Vue 3 in Vite.
+# Contexto del proyecto
 
-## Recommended IDE Setup
+Aplicación creada para visualizar las estadísticas de los diferentes superhéroes almacenados en la API 'https://akabab.github.io/superhero-api'
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# Vistas
 
-## Customize configuration
+<img width="1414" alt="Captura de pantalla 2022-08-22 a las 21 05 34" src="https://user-images.githubusercontent.com/63967914/185999615-69c28077-f473-4a53-befe-8f423d90b192.png">
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<img width="1426" alt="Captura de pantalla 2022-08-22 a las 21 07 12" src="https://user-images.githubusercontent.com/63967914/185999649-95b43e59-fe04-40d9-a6c6-f8e10a42f2a8.png">
 
-## Project Setup
 
-```sh
-npm install
+# Características generales
+
+
+- En la aplicación los usuarios  pueden ver las estadísticas de los distintos superhéroes.
+- Tambíen podrán guardar los superhéroes de su preferencia en la lista de favoritos.
+- Aquellos superhéroes guardados como favoritos podrán ser valorados mediante un sistema de estrellas.
+- Los datos de  aquellos superhéroes guardados como favoritos podrán ser modificados.
+- Aquellos superhéroes guardados como favoritos podrán ser eliminados de la lista de favoritos.
+- La aplicación será responsive
+- Además, la aplicación no dispondrá de persistencia, por lo que los datos no serán almacenados una vez se abandone la página.
+
+# Requisitos técnicos
+
+- Vue.js ^3.2.37
+- Npm ^8.11.0
+    
+# Instalación
+
+clonar el repositorio: 
+```
+git clone https://github.com/ProjectComixSix/HangarRebelde.git
 ```
 
-### Compile and Hot-Reload for Development
+``` 
+npm install && npm run dev
+```
 
-```sh
+## Iniciar app
+
+```
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Metodología de trabajo
 
-```sh
-npm run build
-```
+-   Agile
+-   Scrum
+-   Pair programming
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```sh
-npm run test:unit
-```
+### Proyecto creado en equipo durante el Bootcamp Factoria F5.
 
-### Lint with [ESLint](https://eslint.org/)
+Integrantes:
 
-```sh
-npm run lint
-```
+-   Mario Jimenez (Product Owner)
+-   David del Castillo (Scrum Master)
+-   Sergio Fernández
+-   Silvia Sánchez
+-   Miguel Ángel Salvador
+-   Alan García
+
+## Herramientas y tecnologías utilizadas
+- HTML5
+- CSS
+- Javascript
+- Vue.js 3
+- Visual Studio Code
+- Git Kraken
+- Figma
